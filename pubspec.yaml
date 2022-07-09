@@ -29,6 +29,9 @@ dependencies:
   flutter_hooks: ^0.18.5+1
   hooks_riverpod: ^1.0.4
 
+  # マークダウン
+  flutter_markdown: ^0.6.10+2
+
   # 便利ウィジェット
   cupertino_icons: ^1.0.2 # 標準アイコン？
   line_icons: ^2.0.1      # 線形アイコン
