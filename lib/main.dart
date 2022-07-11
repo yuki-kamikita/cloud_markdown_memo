@@ -1,8 +1,6 @@
+import 'package:cloud_markdown_memo/ui/Home.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-
-import 'ui/Home.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -20,21 +18,24 @@ class MyApp extends HookConsumerWidget {
     return MaterialApp(
       themeMode: ref.watch(themeModeProvider), // ユーザー設定でここの値を変更できるようにすればいいな
       theme: ThemeData(
-          useMaterial3: true,
-          colorSchemeSeed: const Color(0xFF6750A4),
-          // colorScheme: lightColorScheme,
-          textTheme: GoogleFonts.yomogiTextTheme(
-            Theme.of(context).textTheme,
-          )),
+        useMaterial3: true,
+        colorSchemeSeed: const Color(0xFF6750A4),
+        // colorScheme: lightColorScheme,
+        // textTheme: GoogleFonts.yomogiTextTheme(
+        //   Theme.of(context).textTheme,
+        // )
+      ),
       darkTheme: ThemeData(
-          useMaterial3: true,
-          colorSchemeSeed: const Color(0xFF6750A4),
-          brightness: Brightness.dark,
-          // colorScheme: darkColorScheme,
-          textTheme: GoogleFonts.yomogiTextTheme(
-            ThemeData(brightness: Brightness.dark).textTheme,
-          )), // https://itome.team/blog/2019/12/flutter-advent-calendar-day12/
-      home: const Home(),
+        useMaterial3: true,
+        colorSchemeSeed: const Color(0xFF6750A4),
+        brightness: Brightness.dark,
+        // colorScheme: darkColorScheme,
+        // textTheme: GoogleFonts.yomogiTextTheme(
+        //   ThemeData(brightness: Brightness.dark).textTheme,
+        // )
+      ), // https://itome.team/blog/2019/12/flutter-advent-calendar-day12/
+      home: Home(),
+      // home: ChangeForm(),
     );
   }
 }
