@@ -42,6 +42,7 @@ class Home extends HookConsumerWidget {
       body: _edit.value
           ? Markdown(
               data: _text,
+              selectable: true,
               onTapText: _switchEditor,
               onTapLink: (text, url, title) {
                 if (url != null) launchUrl(Uri.parse(url));
